@@ -1,0 +1,17 @@
+.navigation-controls {
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+  @media screen and (max-width: $media-m) {
+    display: none;
+  }
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    width: 38px;
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.filterPanel {
+  display: flex;
+  padding-bottom: 20px;
+  border-bottom: 2px solid $ornament-border;
+  button {
+    max-width: 100px;
+    padding: 5px;
+  }
+  select {
+    max-width: 400px;
+    padding: 5px;
+  }
+  label {
+    width: 400px;
+  }
+  @media screen and (max-width: $media-m) {
+    flex-direction: column;
+    width: 400px;
+    button,
+    select,
+    label {
+      width: 400px;
+      max-width: 400px;
+    }
+  }
+}

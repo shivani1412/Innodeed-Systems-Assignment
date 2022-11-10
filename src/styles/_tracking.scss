@@ -1,0 +1,22 @@
+.tracking {
+  display: none;
+  width: 100%;
+  justify-content: center;
+
+  @media screen and (max-width: $media-m) {
+    display: flex;
+  }
+
+  .tracker {
+    background: $ornament-divider;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    margin: 0 3px 0 3px;
+    &.active {
+      background: $primary-foreground;
+    }
+  }
+
+}
+

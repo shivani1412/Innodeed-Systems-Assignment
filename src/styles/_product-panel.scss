@@ -1,0 +1,116 @@
+
+.productPanelWrapper {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: $media-m) {
+    overflow: scroll;
+  }
+}
+
+.productPanelContainer {
+  display: flex;
+  transition: all 1s ease-in-out;
+  min-width: $media-xs;
+  position: relative;
+
+  .productPanel {
+    font-family: Volvo Novum, Arial, sans-serif;
+    width: 23%;
+    min-width: 23%;
+    box-sizing: border-box;
+    margin: 1%;
+    max-height: 400px;
+
+    @media screen and (max-width: $media-m) {
+      width: 75%;
+      min-width: 75%;
+    }
+
+    &__bodyType {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: $secondary-foreground;
+      font-weight: 900;
+      margin: 0;
+      @media screen and (max-width: $media-m) {
+        font-size: 14px;
+      }
+    }
+
+    &__modelName {
+      color: $primary-foreground;
+      display: inline-block;
+      font-size: 13px;
+      margin: 5px 0 10px 0;
+      overflow: scroll;
+      @media screen and (max-width: $media-m) {
+        font-size: 15px;
+      }
+      span {
+        color: $secondary-foreground;
+        margin-left: 5px;
+        font-size: 12px;
+        font-weight: normal;
+        @media screen and (max-width: $media-m) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: $media-t) {
+          display: block;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__image {
+      width: 100%;
+    }
+
+    &__linkContainer {
+      margin-top: 20px;
+      a:first-child {
+        text-align: end;
+        @media screen and (max-width: $media-m) {
+          font-size: 14px;
+          .icon {
+            display: inline-block;
+          }
+        }
+      }
+      a {
+        box-sizing: border-box;
+        color: $action;
+        cursor: pointer;
+        font-weight: 500;
+        text-transform: uppercase;
+        text-align: start;
+        text-decoration: none;
+        font-size: 12px;
+        width: 50%;
+        max-height: 15px;
+        padding-left: 17px;
+        overflow: hidden;
+        display: inline-block;
+        .icon {
+         top: 1px;
+        }
+
+        @media screen and (max-width: $media-tp) {
+          text-align: start;
+          padding: 0;
+          .icon {
+            display: none;
+          }
+        }
+        @media screen and (max-width: $media-m) {
+          font-size: 14px;
+          padding-left: 17px;
+            .icon {
+              display: inline-block;
+            }
+          }
+        }
+    }
+  }
+}
