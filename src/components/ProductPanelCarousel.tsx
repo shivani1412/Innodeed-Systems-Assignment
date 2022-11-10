@@ -12,21 +12,21 @@ export default function ProductPanelCarousel() {
     const [carData, setCarData] = useState<ItemProps[]>([]);
     const [savedData, setSavedData] = useState<ItemProps[]>([]);
     const [containerWidth, setContainerWidth] = useState('');
-    const [navigation, setNavigation] = useState('');
+    const [navigation, setNavigation] = useState);
     const [isForward, setIsForward] = useState(false);
     const [isBackward, setIsBackward] = useState(false);
     const [isFilter, setIsFilter] = useState(false);
     let [counter, setCounter] = useState(0);
     const [totalGroups, setTotalGroups] = useState(0);
     const [filterValue, setFilterValue] = useState('');
-    const [totalItems, setTotalItems] = useState([]);
+    const [totalItems, setTotalItems] = useState();
 
     const movePanel = (direction: number) => { // direction value determines panel direction
         direction === 0 ? setCounter(counter--) : setCounter(counter++) ;
         checkNavigation();
         // 0: backwards, 1: forwards
-        const panelDirection = direction ? (parseInt(navigation) - parseInt(containerWidth)) : (navigation + containerWidth)
-        setNavigation(stringify.arguments(panelDirection));
+        const panelDirection = direction ? (navigation - containerWidth) : (navigation + containerWidth)
+        setNavigation(panelDirection);
     }
 
     const checkNavigation = () => { // checks if navigation should be disabled
